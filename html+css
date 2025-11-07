@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eureka Archives</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #d60000; 
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      background-color: white;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+      border-bottom: 6px solid black;
+    }
+
+    .logo {
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: black;
+      text-decoration: none;
+      margin: 0 10px;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    nav a.contato {
+      background-color: #d60000;
+      color: white;
+    }
+
+    /* === CONTEÚDO PRINCIPAL === */
+    main h2 {
+      margin-top: 40px;
+      font-size: 1.3em;
+    }
+
+    .materias {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .materia {
+      background-color: #ff4d4d20; 
+      border-radius: 8px;
+      padding: 10px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .materia:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #fff3;
+      cursor: pointer;
+    }
+
+    .materia img {
+      width: 100%;
+      border-radius: 8px;
+      background-color: white;
+    }
+
+    .materia p {
+      margin-top: 10px;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+
+   
+    .materia.selecionada {
+      border: 3px solid yellow;
+      background-color: #ffc10720;
+    }
+
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .materias {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">💡 <strong>Eureka</strong> archives</div>
+    <nav>
+      <a class="contato" href="#">contato e sobre nós</a>
+      <a href="#">Home</a>
+      <a href="#">Explorar</a>
+      <a href="#">Questões</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Qual dessas matérias você quer estudar?</h2>
+
+    <section class="materias">
+      <div class="materia">
+        <img src="biologia.png" alt="Biologia">
+        <p>Biologia</p>
+      </div>
+
+      <div class="materia">
+        <img src="matematica.png" alt="Matemática">
+        <p>Matemática</p>
+      </div>
+
+      <div class="materia">
+        <img src="fisica.png" alt="Física">
+        <p>Física</p>
+      </div>
+
+      <div class="materia">
+        <img src="quimica.png" alt="Química">
+        <p>Química</p>
+      </div>
+
+      <div class="materia">
+        <img src="https://www.google.com/imgres?q=geografia%20pmng&imgurl=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fthumbnails%2F036%2F303%2F394%2Fsmall%2Fai-generated-earth-globe-clipart-global-sphere-illustration-transparent-background-planet-earth-graphic-world-map-icon-international-symbol-geography-concept-png.png&imgrefurl=https%3A%2F%2Fpt.vecteezy.com%2Fpng-gratis%2Fgeografia&docid=6EuQxB7OOoBdwM&tbnid=D2TIryCvTISq4M&vet=12ahUKEwj_7r7jm-CQAxXNH7kGHdieHH44ChAzegQIBxAA..i&w=613&h=350&hcb=2&ved=2ahUKEwj_7r7jm-CQAxXNH7kGHdieHH44ChAzegQIBxAA.png" alt="Geografia">
+        <p>Geografia</p>
+      </div>
+
+      <div class="materia">
+        <img src="outra.png" alt="Outra">
+        <p>Outra</p>
+      </div>
+
+      
+      <div class="materia selecionada">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZj7A86fBochLBSz4hIrXUuHz8HX7rc8BmQg&s.png" alt="História">
+        <p>História</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
